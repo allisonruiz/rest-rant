@@ -21,7 +21,7 @@ const app = express()
 app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
-    res.send('Homepage')
+    res.send('Sexy Homepage')
 })
 
 app.get('*', (req, res) => {
