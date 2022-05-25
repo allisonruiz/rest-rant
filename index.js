@@ -14,15 +14,17 @@
 //     3. write callback function with req, res
 //     4. call res.send('hello world')
 
-const express = require('express');
+require('dotenv').config()
+const express = require('express')
+const req = require('express/lib/request')
+const app = express()
 
-const app= express();
+app.get('/', (req, res) => {
+    res.send('Hello world!')
+})
 
-app.get('/', (req,res) => {
-    console.log("page has been opened");
-    res.send('HOME PAGE');
-});
+app.get('*', (req, res) => {
+    res.status(404) .send('<h1>404 Page</h1>')
+})
 
-app.listen(3000, () => {
-    console.log('server started');
-});
+app.listen(process.env.PORT)
