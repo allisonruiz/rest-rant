@@ -4,7 +4,7 @@ router.get('/new', (req, res) => {
     res.render('places/new')
   })
   
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     let places = [{
         name: 'H-Thai-ML',
         city: 'Seattle',
