@@ -17,9 +17,7 @@ app.use(express.urlencoded({ extended: true }))
 app.get('/', (req, res) => {
     res.render('home')
 })
-app.get('/places/new', (req, res) => {
-    res.render('new')
-})
+
 app.get('*', (req, res) => {
     res.render('error404')
 })
