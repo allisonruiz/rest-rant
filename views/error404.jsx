@@ -7,7 +7,7 @@ return (
         <main>
             <h1>404: PAGE NOT FOUND</h1>
             <p>Oop, sorry, we can't find this page!</p>
-            <img src="/images/kittykat.jpeg" alt="cute cat pic" />
+            <img src="/images/rainkawaii.gif" alt="sanrio character in pink raincoat in rain" />
         </main>
     </Def>
     )
