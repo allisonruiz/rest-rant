@@ -1,25 +1,25 @@
 const React = require('react')
 const Def = require('../default')
 
-function show(data) {
-    console.log(data.id)
+function show({place, id}) {
+    console.log(id)
     return(
         <Def>
             <main>
-                <h1>{data.place.name}</h1>
+                <h1>{place.name}</h1>
                 <div>
                 <p className="text-center">
-		      {data.place.cuisines}
+		      {place.cuisines}
 		    </p>
-		    <img src={data.place.pic} alt={data.place.name} />
+		    <img src={place.pic} alt={place.name} />
 		    <p className="text-center">
-		      Located in {data.place.city}, {data.place.state}
+		      Located in {place.city}, {place.state}
 		    </p>
                 </div>
-                <a href={`/places/${data.id}/edit`} className="btn btn-warning">
+                <a href={`/places/${id}/edit`} className="btn btn-warning">
                     Edit
                 </a>
-                <form method='POST' action={`/places/${data.id}?_method=DELETE`}>
+                <form method='POST' action={`/places/${id}?_method=DELETE`}>
                     <button type='submit' className='btn btn-danger'>
                         Delete
                     </button>

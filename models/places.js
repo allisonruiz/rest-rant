@@ -5,7 +5,7 @@ module.exports = [{
     cuisines: 'Thai, Pan-Asian, Vegan',
     pic: '/images/veganpho.jpeg'
 }, {
-    name: 'The Vegan',
+    name: 'Taco Tuesday',
     city: 'Los Angeles',
     state: 'CA',
     cuisines: 'Vegan, Tacos, Mexican Cuisine, Desserts',

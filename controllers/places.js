@@ -43,18 +43,7 @@ router.post('/', (req, res) => {
   res.redirect('/places')
 })
 
-router.delete('/places/:id', (req, res) => {
-    
-    let id = Number(req.params.id)
-    if (isNaN(id)) {
-        res.render('error404')
-    } else if (!places[id]) {
-        res.render('error404')
-    } else {
-        places.splice(i, 1)
-        res.redirect('/places')
-    }
-})
+
 router.get('/:id/edit', (req, res) => {
     console.log(req.params.id)
     let id = Number(req.params.id)
@@ -68,5 +57,20 @@ router.get('/:id/edit', (req, res) => {
       res.render('places/edit', { place: places[id] })
     }
   })
+
+router.delete('/:id', (req, res) => {
+    console.log("DELETE")
+    let id = Number(req.params.id)
+    console.log(id)
+    if (isNaN(id)) {
+        res.render('error404')
+    } else if (!places[id]) {
+        res.render('error404')
+    } else {
+        places.splice(id, 1)
+        // res.redirect('places/show', { place: places[id], id})
+        res.redirect('/places')
+    }
+})
 
 module.exports = router
